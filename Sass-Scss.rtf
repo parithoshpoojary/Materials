@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red102\green102\blue102;\red204\green204\blue204;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs56\lang9 SASS\ulnone\par
+\fs28\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.\par
+{\pntext\f1\'B7\tab}Build on RUBY.\par
+{\pntext\f1\'B7\tab}Sass - Syntactically awesome stylesheets.\par
+{\pntext\f1\'B7\tab}Sass is a CSS pre-processor.\par
+{\pntext\f1\'B7\tab}Sass reduces repetition of CSS and therefore saves time.\par
+{\pntext\f1\'B7\tab}Difference b/w Sass and Scss is the syntax.\par
+
+\pard\sa200\sl276\slmult1\tab    - Sass does not have any synatx, it just purely uses indendation \tab       and tabs to differentiate bw functions. \{\fs22 When Sass was \tab\tab       \tab        converted to css, we had to remove/add all the syntax in the css, this caused a \tab        lot of problem, so Scss was developed to overcome this issue\fs28 .\}\par
+\tab    - Scss uses syntax same as the css uses. We can call this as the  \tab       superset of CSS.   \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1  If you are using ATOM  -    sass --watch \cf1 foldername\cf2  \cf0 (ATOM) - terminal code.\par
+{\pntext\f1\'B7\tab}If you are using VScode - option is there as Watch Sass (Bottom right corner \cf1 condn\cf0 : Installed Liver sass compiler.)\par
+
+\pard\sa200\sl276\slmult1 ------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Variables\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1\qj Variables are a way to store information that you can re-use later.\par
+With Sass, you can store information in variables, like:\par
+    - strings, numbers, colors, booleans, lists, nulls\par
+Sass uses the \b $\b0  symbol, followed by a name, to declare variables.\par
+
+\pard\sa200\sl276\slmult1\qc\b\i $variablename: value;\par
+
+\pard\sa200\sl276\slmult1\i0 note: \b0 Use !global to override the varibale value.\par
+-----------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Nesting\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 Sass lets you nest CSS selectors in the same way as HTML.\par
+\b Scss\b0  code ex:\par
+\b nav \{\par
+  ul \{\par
+    margin: 0;\par
+    padding: 0;\par
+    list-style: none;\par
+  \}\par
+  li \{\par
+    display: inline-block;\par
+  \}\par
+  a \{\par
+    display: block;\par
+    padding: 6px 12px;\par
+    text-decoration: none;\par
+  \}\par
+\}\par
+\b0 and after compilation the \b CSS\b0  code looks something like this:\par
+\b nav ul \{\par
+  margin: 0;\par
+  padding: 0;\par
+  list-style: none;\par
+\}\par
+nav li \{\par
+  display: inline-block;\par
+\}\par
+nav a \{\par
+  display: block;\par
+  padding: 6px 12px;\par
+  text-decoration: none;\par
+\}\par
+\b0 So instead of writing individual block, Scss helps you ease the work with the help of nesting.\par
+------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Partials and Imports\ulnone\b0\par
+
+\pard\sa200\sl276\slmult1 The partials file name should always begin with an \b "_"\b0 .\par
+By default, Sass transpiles all the .scss files directly. However, when you want to import a file, you do not need the file to be transpiled directly.\par
+Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in Sass.\par
+So, a partial Sass file is named with a leading underscore  \par
+
+\pard\sa200\sl276\slmult1\qc\b\i _filename.scss\i0 .\b0\par
+
+\pard\sa200\sl276\slmult1\par
+Just like CSS, Sass also supports the @import directive.\par
+The \i @import\i0  directive allows you to include the content of one file in another.\par
+The CSS \i @import \i0 directive has a major drawback due to performance issues; it creates an extra HTTP request each time you call it. However, the Sass \i @import \i0 directive includes the file in the CSS; so no extra HTTP call is required at runtime!\par
+
+\pard\sa200\sl276\slmult1\qc\b\i @import filename;\par
+
+\pard\sa200\sl276\slmult1\b0\i0 ------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Mixin and Include\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 The \i @mixin \i0 directive lets you create CSS code that is to be reused throughout the website.\par
+
+\pard\sa200\sl276\slmult1\qc\b @mixin name \{ property: value;  property: value;\} \par
+
+\pard\sa200\sl276\slmult1\b0 The \i @include \i0 directive is created to let you use (include) the mixin.\par
+
+\pard\sa200\sl276\slmult1\qc\b selector \{@include mixin-name;\}\par
+
+\pard\sa200\sl276\slmult1\b0 Mixins accept arguments. This way you can pass variables to a mixin.\par
+Here is how to define a mixin with arguments:\par
+
+\pard\sa200\sl276\slmult1\qc\b @mixin name($width, $color) \{ border: $width solid $color;\} \par
+
+\pard\sa200\sl276\slmult1\b0 It is also possible to define default values for mixin variables:\par
+
+\pard\sa200\sl276\slmult1\qc\b @mixin name($width: 1px, $color: red) \{ border: $width solid $color;\} \par
+
+\pard\sa200\sl276\slmult1\b0 ------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Extend and Inheritance\par
+
+\pard\sa200\sl276\slmult1\b0 The \i @extend \i0 directive lets you share a set of CSS properties from one selector to another.\par
+The \i @extend \i0 directive is useful if you have almost identically styled elements that only differ in some small details.\par
+
+\pard\sa200\sl276\slmult1\qc\b @extend .classname;\par
+
+\pard\sa200\sl276\slmult1\b0 ------------------------------------------------------------------------------------------------\b\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Strings\b0\par
+
+\pard\sa200\sl276\slmult1 -\b   quote(string) \b0 -  Adds quotes to string, and returns the result.\par
+-  \b str-index(string, substring) \b0 -  Returns the index of the first occurrence of the substring within string.\par
+-  \b str-insert(string, insert, index) -  \b0 Returns string with insert inserted at the specified index position.\par
+-  \b str-length(string) \b0 -  Returns the length of string (in characters).\par
+-  \b str-slice(string, start, end) \b0 -  Extracts characters from string; start at start and end at end, and returns the slice.\par
+-  \b to-lower-case(string) \b0 -  Returns a copy of string converted to lower case.\par
+-  \b to-upper-case(string) \b0 -  Returns a copy of string converted to upper case.\par
+-  \b unique-id() \b0 -  Returns a unique randomly generated unquoted string (guaranteed to be unique within the current sass session).\par
+-  \b unquote(string) \b0 -  Removes quotes around string (if any), and returns the result.\par
+------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Numeric\par
+
+\pard\sa200\sl276\slmult1\b0 -\b  abs(number) \b0 -  Returns the absolute value of number.\par
+- \b ceil(number) \b0 -  Rounds number up to the nearest integer.\par
+- \b comparable(num1, num2) \b0 -  Returns whether num1 and num2 are comparable.\par
+- \b floor(number) \b0 -  Rounds number down to the nearest integer.\par
+- \b max(number...) \b0 -\b   \b0 Returns the highest value of several numbers.\par
+- \b min(number...) \b0 -  Returns the lowest value of several numbers.\par
+- \b percentage(number) \b0 -  Converts number to a percentage (multiplies the number with 100).\par
+- \b random() \b0 -  Returns a random number between 0 and 1.\par
+- \b random(number) \b0 -  Returns a random integer between 1 and number.\par
+- \b round(number) \b0 -  Rounds number to the nearest integer.\par
+------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Map\ul\par
+
+\pard\sa200\sl276\slmult1\ulnone note: \b0 Sass maps are immutable (they cannot change). So, the map functions that return a map, will return a new map, and not change the original map.\ul\par
+\ulnone -  \b map-get(map, key) \b0 -  Returns the value for the specified key in the map.\par
+-  \b map-has-key(map, key) \b0 -  Checks whether map has the specified key. Returns true or false.\par
+-  \b map-keys(map) \b0 -  Returns a list of all keys in map.\par
+-  \b map-merge(map1, map2) \b0 -  Appends map2 to the end of map1.\par
+-  \b map-remove(map, keys...) \b0 -  Removes the specified keys from map.\par
+-  \b map-values(map) \b0 -  Returns a list of all values in map. \par
+------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Color\ul\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 - \b rgb(red, green, blue) \b0 -  Sets a color using the Red-Green-Blue (RGB) model. An RGB color value is specified with: rgb(red, green, blue). Each parameter defines the intensity of that color and can be an integer between 0 and 255, or a percentage value (from 0% to 100%).\par
+- \b rgba(red, green, blue, alpha) \b0 -  Sets a color using the Red-Green-Blue-Alpha (RGBA) model. RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the color. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).\par
+- \b hsl(hue, saturation, lightness) \b0 -  Sets a color using the Hue-Saturation-Lightness (HSL) model - and represents a cylindrical-coordinate representation of colors. Hue is a degree on the color wheel (from 0 to 360) - 0 or 360 is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.\par
+- \b hsla(hue, saturation, lightness, alpha) \b0 -  Sets a color using the Hue-Saturation-Lightness-Alpha (HSLA) model. HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the color. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).\par
+- \b grayscale(color) \b0 -  Sets a gray color with the same lightness as color.\par
+\b complement(color) \b0 -  Sets a color that is the complementary color of color.\par
+- \b invert(color, weight) \b0 -  Sets a color that is the inverse or negative color of color. The weight parameter is optional and must be a number between 0% and 100%. Default is 100%.\par
+\ul\b Sass Get Color Functions\ulnone\b0\par
+- \b red(color) \b0 -  Returns the red value of color as a number between 0 and 255.\par
+- \b green(color) \b0 -  Returns the green value of color as a number between 0 and 255.\par
+- \b blue(color) \b0 -  Returns the blue value of color as a number between 0 and 255.\par
+- \b hue(color) \b0 -  Returns the hue of color as a number between 0deg and 255deg.\par
+- \b saturation(color) \b0 -  Returns the HSL saturation of color as a number between 0% and 100%.\par
+- \b lightness(color) \b0 -  Returns the HSL lightness of color as a number between 0% and 100%.\par
+- \b alpha(color) \b0 -  Returns the alpha channel of color as a number between 0 and 1.\par
+- \b opacity(color) \b0 -  Returns the alpha channel of color as a number between 0 and 1.\par
+\ul\b Sass Manipulate Color Functions\ulnone\b0\par
+- \b mix(color1, color2, weight) \b0 -  Creates a color that is a mix of color1 and color2. The weight parameter must be between 0% and 100%. A larger weight means that more of color1 should be used. A smaller weight means that more of color2 should be used. Default is 50%.\par
+- \b adjust-hue(color, degrees) \b0 -  Adjusts the color's hue with a degree from -360deg to 360deg.\par
+- \b adjust-color(color, red, green, blue, hue, saturation, lightness, alpha) \b0 Adjusts one or more parameters by the specified amount. This function adds or subtracts the specified amount to/from the existing color value.\par
+- \b change-color(color, red, green, blue, hue, saturation, lightness, alpha) - \b0 Sets one or more parameters of a color to new values.\par
+- \b scale-color(color, red, green, blue,  saturation, lightness, alpha) \b0 -  Scales one or more parameters of color.\par
+- \b rgba(color, alpha) \b0 -   Creates a new color of color with the given alpha channel.\par
+- \b lighten(color, amount) \b0 -  Creates a lighter color of color with an amount between 0% and 100%. The amount parameter increases the HSL lightness by that percent.\par
+- \b darken(color, amount) \b0 -  Creates a darker color of color with an amount between 0% and 100%. The amount parameter decreases the HSL lightness by that percent.\par
+- \b saturate(color, amount) \b0 -  Creates a more saturated color of color with an amount between 0% and 100%. The amount parameter increases the HSL saturation by that percent.\par
+- \b desaturate(color, amount) \b0 -  Creates a less saturated color of color with an amount between 0% and 100%. The amount parameter decreases the HSL saturation by that percent.\par
+- \b opacify(color, amount) \b0 -  Creates a more opaque color of color with an amount between 0 and 1. The amount parameter increases the alpha channel by that amount.\par
+- \b fade-in(color, amount) \b0 -  Creates a more opaque color of color with an amount between 0 and 1. The amount parameter increases the alpha channel by that amount.\par
+- \b transparentize(color, amount) \b0 -  Creates a more transparent color of color with an amount between 0 and 1. The amount parameter decreases the alpha channel by that amount.\par
+- \b fade-out(color, amount) \b0 -  Creates a more transparent color of color with an amount between 0 and 1. The amount parameter decreases the alpha channel by that amount.\par
+------------------------------------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b IF ELSEIF ELSE statement\ul\par
+
+\pard\sa200\sl276\slmult1\qc\ulnone @if $id condition \{ .... \}\par
+
+\pard\sa200\sl276\slmult1\qc @elseif $id condition \{ .... \}\par
+@else \{ .... \}\par
+
+\pard\sa200\sl276\slmult1\b0 ------------------------------------------------------------------------------------------------\ul\b\par
+}
+ 
