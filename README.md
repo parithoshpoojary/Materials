@@ -1,3 +1,11 @@
-# Materials
+## Materials
 
-Just some basic materials to get started with Git/Github, CSS3, Sass/Scss, HTML5, JS.
+  This is my study notes for HTML5, CSS3, Git/Github, SASS. You will find lot of basic HTML/CSS stuff as well.
+  
+  #### This repo consists of:
+
+    * HTML5
+    * CSS3
+    * Git/Github
+    * SaSS/ScSS
+
