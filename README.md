@@ -1,6 +1,6 @@
 ## Materials
 
-  This is my study notes for HTML5, CSS3, Git/Github, SASS. You will find lot of basic HTML/CSS stuff as well.
+  This is my study notes for HTML5, CSS3, Git/Github, SASS and SQL.
   
   #### This repo consists of:
 
@@ -8,4 +8,5 @@
     * CSS3
     * Git/Github
     * SaSS/ScSS
+    * SQL
 
